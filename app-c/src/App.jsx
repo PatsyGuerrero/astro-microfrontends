@@ -1,10 +1,16 @@
 import styles from "./App.module.css";
+import { Route } from '@solidjs/router';
+import Cuentas from "./pages/cuentas/Cuentas";
+import CuentaAhorros from "./pages/cuenta-de-ahorros/CuentaAhorros";
 
 function App() {
   return (
-    <section className={styles["app-c"]}>
-      <h1>App c</h1>
-    </section>
+
+    <>
+      <Route path="/" component={Cuentas} />
+      <Route path="/cuentas/cuenta-de-ahorros" component={CuentaAhorros} />
+    </>
+    
   );
 }
 
